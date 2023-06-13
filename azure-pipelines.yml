@@ -1,0 +1,23 @@
+name: "Terraform Plan"
+
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: TerraformInstaller@0
+  displayName: "Install Terraform"
+  inputs:
+    terraformVersion: '1.3.9'
+    terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
+
+- script: |
+    cd ./Example
+    terraform init
+    terraform plan -out=terraform.tfplan
+  displayName: 'Terraform Plan'
