@@ -13,7 +13,7 @@ terraform {
 provider "aws" {
 
  assume_role {
-    role_arn     = "rn:aws:iam::064648406443:role/Terraform-teamcity-role"
+    role_arn     = "arn:aws:iam::064648406443:role/Terraform-teamcity-role"
     session_name = "SESSION_NAME"
     external_id  = "EXTERNAL_ID"
   }
