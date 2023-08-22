@@ -9,8 +9,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+
+ assume_role {
+    role_arn     = "rn:aws:iam::064648406443:role/Terraform-teamcity-role"
+    session_name = "SESSION_NAME"
+    external_id  = "EXTERNAL_ID"
+  }
 }
 
-data "aws_caller_identity" "current" {}
 
