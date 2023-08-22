@@ -8,5 +8,14 @@ terraform {
   }
 }
 
-provider "aws" {}
+
+
+provider "aws" {
+
+ assume_role {
+    role_arn     = "rn:aws:iam::064648406443:role/Terraform-teamcity-role"
+    session_name = "SESSION_NAME"
+    external_id  = "EXTERNAL_ID"
+  }
+}
 
