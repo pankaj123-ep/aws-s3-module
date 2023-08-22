@@ -9,6 +9,10 @@ terraform {
 }
 provider "aws" {
   region = "us-east-1"
+ assume_role {
+    role_arn = "arn:aws:iam::064648406443:role/Terraform-teamcity-role"
+    session_name = "TeamCity-session"
+  }
 }
 
 
