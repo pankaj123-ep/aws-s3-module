@@ -8,8 +8,8 @@ terraform {
   }
 }
 provider "aws" {
-  shared_config_files      = ["C:/Users/pakumar/.aws/config"]
-  shared_credentials_files = ["C:/Users/pakumar/.aws/credentials"]
+  /*shared_config_files      = ["C:/Users/pakumar/.aws/config"]
+  shared_credentials_files = ["C:/Users/pakumar/.aws/credentials"] */
   profile                  = "dev"
 }
 
