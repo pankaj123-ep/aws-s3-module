@@ -9,12 +9,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
- assume_role {
-    role_arn = "arn:aws:sts::064648406443:assumed-role/Terraform-teamcity-role/TeamCity-session"
-    session_name = "TeamCity-session"
-  }
+  /*shared_config_files      = ["C:/Users/pakumar/.aws/config"]
+  shared_credentials_files = ["C:/Users/pakumar/.aws/credentials"] */
+  profile                  = "dev"
 }
+
 
 
 
