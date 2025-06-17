@@ -10,10 +10,10 @@ pool:
 
 steps:
 
-- task: TerraformInstaller@0
+- task: TerraformInstaller@@
   displayName: "Install Terraform"
   inputs:
-    terraformVersion: '1.3.9'
+    terraformVersion: 'latest'
     terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
 
 - script: |
