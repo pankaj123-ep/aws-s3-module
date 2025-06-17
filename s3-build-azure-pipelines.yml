@@ -10,12 +10,6 @@ pool:
 
 steps:
 
-- task: TerraformInstaller@@
-  displayName: "Install Terraform"
-  inputs:
-    terraformVersion: 'latest'
-    terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
-
 - script: |
     cd ./Example
     terraform init
