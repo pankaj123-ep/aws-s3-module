@@ -1,0 +1,16 @@
+name: "Terraform Plan"
+
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+ name: Default
+steps:
+
+- script: |
+    cd ./Example
+    terraform init
+    terraform plan -out=terraform.tfplan
+  displayName: 'Terraform Plan'
